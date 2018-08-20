@@ -19,10 +19,27 @@ A couple things to get everyone on the same page
 
 <br/>
 
-- Try logging into (one of) the department's RStudio servers
-    + Master's students: http://saxon.stat.duke.edu:8787
-    + PhD students: http://smith.stat.duke.edu:8787
+- Try logging on to one of the department's RStudio servers
+    + https://smith.stat.duke.edu:8787
     + Login and password are your `netid` and associated password.
+
+
+## Username advice
+
+
+* Incorporate your actual name! People like to know who they’re dealing with. Also makes your username easier for people to guess or remember.
+
+* Reuse your username from other contexts, e.g., Twitter or Slack. But, of course, someone with no GitHub activity will probably be squatting on that.
+
+* Pick a username you will be comfortable revealing to your future boss.
+
+* Shorter is better than longer.
+
+* Be as unique as possible in as few characters as possible. In some settings GitHub auto-completes or suggests usernames.
+
+* Make it timeless. Don’t highlight your current university, employer, or place of residence.
+
+* Avoid words laden with special meaning in programming.
 
 
 ## Materials
