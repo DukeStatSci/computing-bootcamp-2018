@@ -4,7 +4,7 @@ author: "Mine Çetinkaya-Rundel and Colin Rundel"
 date: "Aug 20, 2018"
 output:
   ioslides_presentation:
-    highlight: pygments
+    highlight: espresso
     widescreen: yes
 ---
 
@@ -264,7 +264,7 @@ your R Markdown document as well
 
 Load the data using the `read.csv` function
 
-```{r}
+```{r message=FALSE}
 gap <- read_csv("https://bit.ly/gap_data")
 ```
 
@@ -278,13 +278,18 @@ gap <- read_csv("https://bit.ly/gap_data")
 
 Source: Grolemund and Wickham, R for Data Science, http://r4ds.had.co.nz/
 
-## Exercise 1
+## Exercise 1 - DEMO
 
 **How many observations are in this dataset?**
 
 ```{r}
 nrow(gap)
 ```
+
+<br>
+
+- R chunks
+- Inline R code
 
 ## Exercise 2 {.smaller}
 
@@ -331,8 +336,8 @@ ggplot(data = eu_5267, aes(x = gdpPercap, y = lifeExp, color = factor(year))) +
 **Ex REDO: Your collaborator realized that the data set they sent you 
 was wrong. Repeat Exercises 1 and 2 with the updated dataset.**
 
-```{r}
-gap_upd <- read.csv("https://bit.ly/gap_data_upd")
+```{r message=FALSE}
+gap_upd <- read_csv("https://bit.ly/gap_data_upd")
 ```
 
 ## Formatting your document
@@ -385,20 +390,70 @@ Source: Grolemund and Wickham, R for Data Science, http://r4ds.had.co.nz/
 
 - Load packages on top of the document
 
-- 
+- Use `output: github_document` for output viewable on GitHub
+
+- Various outputs: Make slides with `output: ioslides_presentation` or `xaringan`,
+make websites with `blogdown`, author a book with `bookdown`, etc.
 
 ## Projects
 
 Always use them. Period.
 
-## Reprex
+## reprex
 
-(tribble)
+If you need help getting unstuck, the first step is to create a **reprex**, 
+or reproducible example.
+
+1. Reproducible
+2. Minimal
+
+```{r}
+#install.packages("reprex")
+library(reprex)
+```
+
+## Stuck?
+
+1. Open an R script
+2. Write a bit of code and copy to clipboard
+3. Enter reprex() in the R Console. In RStudio, you’ll see a preview of your rendered reprex.
+
+Alternatively, use the reprex addin (Addins -> Render reprex...)
+
+## reprex, example 1
+
+Q: The mean function is giving me an error: `argument is not numeric or logical: returning NA`,
+why is that?
+
+
+```{r}
+num_cats <- c(2, 3, 0, 0, 1, "none")
+mean(num_cats)
+```
+
+## reprex, example 2 {.smaller}
+
+Q: Why are my group means being repeated for each observation instead of being 
+reported once for each group?
+
+```{r}
+df <- tribble(
+  ~ x, ~ group, 
+  1,   "A",      
+  2,   "A",      
+  3,   "A",
+  4,   "B",      
+  5,   "B"
+  )
+df %>%
+  group_by(group) %>%
+  mutate(gr_mean = mean(x))
+```
 
 ## Just taking a look at the data
 
-- Excel
-- Plain text editors: Sublime
+- Excel: Just don't. But if you must, do it on a copy of the data.
+- Plain text editors: Sublime Text etc.
 
 ## Style matters
 
