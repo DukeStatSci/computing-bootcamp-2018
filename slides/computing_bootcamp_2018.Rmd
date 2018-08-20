@@ -1,5 +1,5 @@
 ---
-title: "DSS Comptuing Bootcamp"
+title: "DSS Computing Bootcamp"
 author: "Mine Çetinkaya-Rundel and Colin Rundel"
 date: "Aug 20, 2018"
 output:
