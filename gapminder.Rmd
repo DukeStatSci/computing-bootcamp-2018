@@ -1,0 +1,48 @@
+---
+title: "Gapminder Exercise Template"
+author: "Mine Cetinkaya-Rundel"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.width = 7)
+```
+
+
+## Load packages
+
+```{r message=FALSE}
+library(tidyverse)
+```
+
+## Load data
+
+```{r}
+gap <- read_csv("https://bit.ly/gap_data")
+```
+
+## Exercises
+
+### Exercise 1
+
+How many observations are in this dataset?
+
+```{r nrow}
+```
+
+### Exercise 2
+
+Visualize the relationship between GDP and life expectancy for 
+countries in Europe in 1952 using a scatter plot.
+
+```{r eu_52}
+```
+
+### Exercise 3
+
+Add year 1967 in another color.
+
+```{r eu_52_67}
+```
+
