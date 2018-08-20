@@ -1,0 +1,53 @@
+---
+title: "DSS Computing Resources"
+author: "Colin Rundel"
+date: "Aug 20, 2018"
+output:
+  ioslides_presentation:
+    highlight: espresso
+    widescreen: yes
+---
+
+## Departmental shared computing resources
+
+- Graduate student computers are shared departmental resources
+    + PhD student desks are assigned a desktop to which you have priority, but it may be used by other students (remotely)
+
+- Dedicated servers: 
+    + `gort`: Undergrads
+    + `saxon`: MSS
+    + `smith`: PhD
+    
+- Home directories are all network shared and backed up
+
+- DSS computing inventory (under Resources / Computing)
+
+- Faculty computers / servers should only be used with permission
+
+## Duke (and beyond) shared computing resouces
+ 
+- Duke Research Computing
+    + Shared compute nodes (CPU + GPU) managed by SLURM
+    + Department owned node(s) 
+    + Requires sponsorship from a PI or class
+    + Regular training events - https://rc.duke.edu/events/
+
+<br/>
+
+- XSEDE
+    + Shared super computer resources via NSF
+    + Sponsorship from Duke *and* a PI / Project
+
+## Department Printers
+
+- Free resource for members of the Department
+
+- Named based on the room and features of the printer
+    + `mono026`
+    + `duplex211`
+    + `color214`
+  
+<br/>    
+    
+- Details on adding printer on your laptop: 
+    + https://wiki.stat.duke.edu/index.php/Printing
