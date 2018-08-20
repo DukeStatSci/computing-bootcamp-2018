@@ -406,7 +406,7 @@ http://style.tidyverse.org/
 
 ## Sessions
 
-[URL]/home to see your sessions
+https://smith.stat.duke.edu:8787/home to see your sessions
 
 # Version control
 
@@ -484,98 +484,28 @@ Your closest collaborator is you six months ago, but you don’t reply to emails
 
 - Graduate student computers are shared departmental resources
     + You'll be assigned a desktop to which you have priority, but it may 
-    be used by others as well (and you can use others' later if needed -- 
-    more on this later)
+    be used by others as well
 
 - Dedicated servers: 
-    + `gort`: Undergrad
-    + `saxon`: MS
+    + `gort`: Undergrads
+    + `saxon`: MSS
     + `smith`: PhD
     
 - Home directories are all network shared and backed up
 
-- DSS computing inventory: https://www2.stat.duke.edu/lib/computer_inventory.php
+- DSS computing inventory (under Resources / Computing)
 
+## Duke (and beyond) computing resouces
+ 
+- Duke Research Computing
+    + Shared compute nodes (CPU + GPU) managed by SLURM
+    + Departmental owned nodes 
+    + Requires sponsorship from a PI or class
+    + Regular training events - https://rc.duke.edu/events/
 
-# On to ssh
-
-## Remote connections
-
-- You will be doing much of your work on remote linux systems, primarily 
-you will be interacting with these machines through a remote terminal and 
-a shell. Using a shell gives you more power to do more tasks more 
-efficiently with your computer.
-
-- OSX / Unix / Linux - these tools should already be installed and you 
-should be able to access your shell through the Terminal application (name 
-may vary slightly depending on your OS).
-
-- Windows - there are several ways to install bash or a bash-like shell, 
-the preferred method is to install the `git for windows` package: 
-https://git-for-windows.github.io/.
-
-## Secure shell (ssh)
-
-- A secure tool for connecting and interacting with remote systems
-- Uses public key encryption
-- Run a single command or work interactively
-- Lots of other neat tricks (proxying, port forwarding, etc.)
-
-## Connecting to saxon / smith
-
-- PhD: `smith`, MS: `saxon`
-- Everyone should have a visitor account of the stats servers now
-- Try to connect to make sure everything is working...
-
-```bash
-$ ssh cr173@saxon.stat.duke.edu
-The authenticity of host 'saxon.stat.duke.edu (152.3.7.55)' can't be established
-.
-RSA key fingerprint is 74:30:5a:d0:cd:a8:d2:6f:a6:e9:c6:80:bb:eb:b4:ba.
-Are you sure you want to continue connecting (yes/no)?yes
-cr173@saxon.stat.duke.edu's password:
-[cr173@saxon ~]$
-```
-
-## Working remotely {.smaller}
-
-You should now be able to run commands remotely on `saxon`. We can 
-interactively run commands on the remote system. Try `lscpu` to see the 
-cpu configuration on server.
-
-```bash
-[cr173@saxon ~]$ lscpu
-Architecture:          x86_64
-CPU op-mode(s):        32-bit, 64-bit
-Byte Order:            Little Endian
-CPU(s):                24
-On-line CPU(s) list:   0-23
-Thread(s) per core:    2
-Core(s) per socket:    6
-Socket(s):             2
-NUMA node(s):          2
-Vendor ID:             GenuineIntel
-CPU family:            6
-Model:                 62
-Stepping:              4
-CPU MHz:               1200.000
-BogoMIPS:              4199.43
-Virtualization:        VT-x
-L1d cache:             32K
-L1i cache:             32K
-L2 cache:              256K
-L3 cache:              15360K
-NUMA node0 CPU(s):     0-5,12-17
-NUMA node1 CPU(s):     6-11,18-23
-```
-
-## Finishing up
-
-Once you are done on the server you can exit by:
-
-- Running `exit`
-- Ctrl-D
-- Wait long enough (connection will time out)
+- XSEDE
+    + Shared super computer resources via NSF
+    + Sponsorship from Duke *and* a PI / Project
 
 # Acknowledgements
 
